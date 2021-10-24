@@ -60,4 +60,13 @@ class TestCredentials(unittest.TestCase):
         '''
         self.new_credentials = Credentials("Reddit", "genichiro21", "password")
 
+    
+    def test_save_credentials(self):
+        '''
+        test case to check if credentials have been added to the credentials list
+
+        '''
+        self.new_credentials.save_credentials()  # saving the credentials
+        self.assertEqual(len(Credentials.credentials_list), 1)
+
 
