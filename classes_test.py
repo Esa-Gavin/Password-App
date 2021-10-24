@@ -53,5 +53,11 @@ class TestUser(unittest.TestCase):
 
 
 class TestCredentials(unittest.TestCase):
-    
+    def setUp(self) -> None:
+        '''
+        test case to run before each test case
+
+        '''
+        self.new_credentials = Credentials("Reddit", "genichiro21", "password")
+
 
