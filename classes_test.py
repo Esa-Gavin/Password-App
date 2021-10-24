@@ -45,3 +45,9 @@ class TestUser(unittest.TestCase):
 
         self.new_user.delete_user()  # deleting a user object
         self.assertEqual(len(User.user_list), 1)
+
+    def test_display_users(self):
+        ''' test_display_users case to test whether users have been displayed '''
+
+        self.assertEqual(User.display_users(), User.user_list)
+
