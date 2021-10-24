@@ -62,8 +62,9 @@ def generatePassword(stringLength=8):
 def password_app():
     print(" ")
     print(" ")
+    print("*"*50)
     print("Hello there Choomba, what is your name?")
-    print(" ")
+    print("*"*50)
     print(" ")
     print(" ")
     username = input()
