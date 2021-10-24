@@ -21,6 +21,22 @@ class User:
 
         User.user_list.remove(self)
 
+    @classmethod
+    def display_users(cls):
+        ''' method that returns all users in the users list '''
+
+        return cls.user_list
+
+    @classmethod
+    def verified_users(cls, username, password):
+        ''' method that verifies users that already have an account '''
+
+        for users in cls.user_list:
+            if users.username == username and users.password == password:
+                return True
+            else:
+                return False
+
 
 class Credentials:
     '''class that generates new instances of credentials for users'''
