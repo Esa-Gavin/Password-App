@@ -61,6 +61,8 @@
 <!-- ABOUT THE PROJECT -->
 
 <!--put your screenshot here-->
+![cli-python](https://user-images.githubusercontent.com/89376826/138612861-afd0ef2b-7c8c-46f4-923f-87a3cad4dc8b.gif)
+
 
 ## About The Project
 
