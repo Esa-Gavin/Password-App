@@ -20,3 +20,10 @@ class User:
         '''delete_user method deletes contact objects in the user_list'''
 
         User.user_list.remove(self)
+
+
+class Credentials:
+    '''class that generates new instances of credentials for users'''
+
+    credentials_list = [] #empty credentials list
+
