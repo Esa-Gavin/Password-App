@@ -102,4 +102,16 @@ class TestCredentials(unittest.TestCase):
         test_multiple.save_credentials()
         self.assertEqual(len(Credentials.credentials_list), 2)
 
+    def test_find_credentials_by_account(self):
+        ''' test case to test whether a credential could be found '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Reddit", "genichiro21", "password")
+
+        test_credentials.save_credentials()
+        
+        found_credentials = Credentials.find_by_account("Reddit")
+
+        self.assertEqual(found_credentials.account, test_credentials.account)
+
 
