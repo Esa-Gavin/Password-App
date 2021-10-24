@@ -114,4 +114,15 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(found_credentials.account, test_credentials.account)
 
+    def test_username_exists(self):
+        ''' test case that checks if the username exists '''
+
+        self.new_credentials.save_credentials()
+        test_username = Credentials("Reddit", "genichiro21", "password")
+
+        test_username.save_credentials()
+
+        username_exists = Credentials.username_exists("genichiro21")
+
+        self.assertTrue(username_exists)
 
