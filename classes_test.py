@@ -88,4 +88,9 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list), 1)
 
+    def test_display_credentials(self):
+        ''' test case to test whether credentials have been displayed '''
+
+        self.assertEqual(Credentials.display_credentials(), Credentials.credentials_list)
+
 
